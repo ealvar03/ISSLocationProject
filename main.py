@@ -43,11 +43,11 @@ def check_nighttime():
 while True:
     time.sleep(60)
     if check_position() and check_nighttime():
-        my_email = "elealvarez201@gmail.com"
-        password = "ylfhpjlwwzejhoih"
+        my_email = "mail@gmail.com"
+        password = "****" # your password here
         with smtplib.SMTP("smtp.gmail.com") as connection:
             connection.starttls()
             connection.login(user=my_email, password=password)
-            connection.sendmail(from_addr=my_email, to_addrs="ele.alv@yahoo.com",
+            connection.sendmail(from_addr=my_email, to_addrs="mail@yahoo.com",
                                 msg=f"Subject: ISS position\n\nLook up!")
 
